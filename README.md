@@ -1,6 +1,4 @@
-<p align="center">
-<img src="./images/puppy-raffle.svg" width="400" alt="puppy-raffle">
-<br/>
+
 
 # Puppy Raffle
 
