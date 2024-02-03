@@ -93,7 +93,7 @@ None
 
 
 
- *Concepts you'll learn: Static analysis, Reentrancy, Weak RNG, Arithmetic issues, How to write a professional looking report.*
+ *Concepts : Static analysis, Reentrancy, Weak RNG, Arithmetic issues, How to write a professional looking report.*
 
 ## Tooling: Static Analysis
  - [Web3 bugs machine vs human](https://github.com/ZhangZhuoSJTU/Web3Bugs)
