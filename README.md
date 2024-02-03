@@ -90,4 +90,59 @@ Player - Participant of the raffle, has the power to enter the raffle with the `
 # Known Issues
 
 None
- 
+
+
+
+ *Concepts you'll learn: Static analysis, Reentrancy, Weak RNG, Arithmetic issues, How to write a professional looking report.*
+
+## Tooling: Static Analysis
+ - [Web3 bugs machine vs human](https://github.com/ZhangZhuoSJTU/Web3Bugs)
+ - Static Analysis
+   - [Slither](https://github.com/crytic/slither)
+   - [Aderyn](https://github.com/Cyfrin/aderyn)
+ - [cloc](https://github.com/AlDanial/cloc)
+ - [Solidity Metrics (audit estimation)](https://github.com/Consensys/solidity-metrics)
+ - [Solidity Visual Developer](https://marketplace.visualstudio.com/items?itemName=tintinweb.solidity-visual-auditor)
+## Scoping & Reconnaissance: Puppy Raffle
+### Exploits: DoS (Denial of service)
+  - Fixes:
+    - Remove unnecessary loops
+### Exploits: Reentrancy
+  - [Case Study: DAO Hack](https://www.gemini.com/cryptopedia/the-dao-hack-makerdao)
+    - [Still plagues us today](https://github.com/pcaversaccio/reentrancy-attacks)
+  - [Exercises](https://github.com/Cyfrin/sc-exploits-minimized/tree/main/src/reentrancy)
+    - [Search "reentrancy" in Solodit](https://solodit.xyz/)
+  - Prevention:
+    - CEI/CEII ( FREI-PI soon!)
+    - NonReentrant modifiers
+### Exploits: Weak RNG
+  - [Case Study: Meebits](https://forum.openzeppelin.com/t/understanding-the-meebits-exploit/8281)
+  - [Exercises](https://github.com/Cyfrin/sc-exploits-minimized/tree/main/src/weak-randomness)
+    - [Search "RNG" in Solodit](https://solodit.xyz/)
+  - Prevention:
+    - [Chainlink VRF](https://docs.chain.link/vrf)
+### Exploits: Arithmetic issues
+   - Examples:
+     - Under/Overflow
+     - Rounding & Precision
+   - [Exercises](https://github.com/Cyfrin/sc-exploits-minimized/tree/main/src/arithmetic)
+     - [Search "overflow" in Solodit](https://solodit.xyz/)
+   - Prevention:
+       - Use newer versions of solidity 
+       - Multiply before divide
+### Exploits: Poor ETH Handling
+  - Case study: [Sushiswap Miso](https://samczsun.com/two-rights-might-make-a-wrong/)
+  - Exercises:
+    - [Stuck ETH without a way to withdraw ](https://gist.github.com/tinchoabbate/99fbf7cbce47eb7c463212fd13f21149)
+    - [Mishandling ETH](https://github.com/Cyfrin/sc-exploits-minimized/tree/main/src/mishandling-of-eth)
+    - [Search "Stuck ETH" in Solodit](https://solodit.xyz/)
+### Informational Findings
+   - Stict Solc Versioning 
+   - Supply Chain Attacks 
+   - Magic Numbers 
+### Gas Audits 
+### Code Maturity 
+   - Code coverage
+### Static Analysis, follow up
+## What is a Competitive Audit? 
+  - [CodeHawks Docs](https://docs.codehawks.com/)
